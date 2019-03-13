@@ -351,6 +351,10 @@ set_target_properties(${TARGET_LIBDFT} PROPERTIES
 
 # Install
 
+target_compile_definitions(${TARGET_LIBDFT}
+    PUBLIC ${COMMON_TARGET_DEFINITIONS}
+)
+
 install(FILES ${PROJECT_SOURCE_DIR}/include/sleefdft.h DESTINATION include)
 install(TARGETS ${TARGET_LIBDFT}
         EXPORT "${targets_export_name}"
